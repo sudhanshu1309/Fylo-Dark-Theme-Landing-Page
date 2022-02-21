@@ -1,0 +1,73 @@
+footer {
+  background-color: $footerBg;
+  height: 218px;
+  width: 100%;
+  padding: 50px 30px;
+
+  .logo {
+    padding-bottom: 20px;
+  }
+
+  .details {
+    font-size: 1rem;
+
+    @include breakpoint(large) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      gap: 20px;
+    }
+
+    .location {
+      display: flex;
+      flex-direction: row;
+      p {
+        font-size: 0.8rem;
+      }
+      img {
+        width: 16px;
+        height: 24px;
+        padding-right: 5px;
+      }
+    }
+
+    .contact {
+      display: flex;
+      flex-direction: column;
+
+      img {
+        height: 24px;
+        width: 24px;
+        padding-right: 8px;
+      }
+    }
+
+    .about {
+      display: flex;
+      flex-direction: column;
+      width: 178px;
+      margin-bottom: 10px;
+      div {
+        padding-bottom: 5px;
+      }
+    }
+
+    .terms {
+      display: flex;
+      flex-direction: column;
+      div {
+        padding-bottom: 5px;
+      }
+    }
+
+    .instagram {
+      display: flex;
+      justify-content: right;
+      align-items: flex-start;
+      padding-right: 50px;
+      justify-content: center;
+      img {
+        padding-right: 5px;
+      }
+    }
+  }
+}

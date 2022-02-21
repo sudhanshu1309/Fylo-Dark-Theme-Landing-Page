@@ -10,6 +10,7 @@ html {
 }
 
 body {
+  background-color: $mainBg;
   margin: 0px;
   padding: 0px;
   font-size: calc(16px + 0.75vw);
@@ -30,6 +31,13 @@ h1,
 h2,
 h3 {
   font-family: $font-heading;
+}
+p,
+a {
+  font-size: 0.875rem;
+  @include breakpoint(large) {
+    font-size: 1rem;
+  }
 }
 
 p {

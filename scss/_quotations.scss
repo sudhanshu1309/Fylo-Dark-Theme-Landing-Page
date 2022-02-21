@@ -1,0 +1,45 @@
+.quotations {
+  background-color: $mainBg;
+  padding: 0 25px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 140px;
+  &-flex {
+    background-image: url("../images/bg-quotes.png");
+    background-repeat: no-repeat;
+    background-position-x: left;
+    background-position-y: top;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 35px 30px 10px 30px;
+    width: 100%;
+    max-width: 430px;
+
+    @include breakpoint(large) {
+      grid-template-columns: 1fr 1fr 1fr;
+      max-width: none;
+    }
+  }
+
+  .quote {
+    background-color: $testBg;
+
+    padding: 45px 28px 25px 25px;
+    // .para {
+    // }
+
+    .name {
+      display: flex;
+      font-size: 9px;
+      align-items: center;
+
+      img {
+        border-radius: 50%;
+        width: 25px;
+        height: 28px;
+        margin-right: 20px;
+      }
+    }
+  }
+}

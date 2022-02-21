@@ -1,9 +1,37 @@
 .hero {
+  position: relative;
   background-color: $introBg;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 40vw;
+    bottom: 0px;
+    background-image: url("../images/bg-curvy-mobile.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+
+    @include breakpoint(medium) {
+      background-image: url("../images/bg-curvy-desktop.svg");
+      height: 33vw;
+    }
+
+    // @include breakpoint(large) {
+    //   height: 420px;
+    // }
+  }
+
+  > * {
+    position: relative;
+    z-index: 1;
+  }
 
   img {
     width: 100%;
@@ -28,5 +56,6 @@
 
   button {
     margin-top: 8px;
+    margin-bottom: 100px;
   }
 }
